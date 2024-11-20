@@ -1,3 +1,9 @@
 site_name: LeetCode-Training
 nav:
+  - HOME: index.md
   - TODO: todo.md
+  - UML: uml.md
+theme: readthedocs
+exclude_docs: |
+  .*
+  /uml//*.puml/

@@ -5,10 +5,10 @@ description = "Default template for PDM package"
 authors = [
     {name = "Dominik Ocsofszki", email = "dominikocsofszki@gmail.com"},
 ]
-dependencies = ["pytest>=8.3.3", "mkdocs>=1.6.1"]
+dependencies = ["pytest>=8.3.3", "mkdocs>=1.6.1", "pylint>=3.3.1", "ruff>=0.7.4", "watchfiles>=0.24.0"]
 requires-python = "==3.12.*"
 readme = "README.md"
-license = {text = "MIT"}
+license = {text = ""}
 
 
 [tool.pdm]
@@ -18,11 +18,6 @@ distribution = false
 pythonpath = "src"
 testpaths = ["tests", "integration"]
 addopts = "-vv -ra -q"
-# log_cli = true
-# log_cli_level = "INFO"
-# log_format = "%(asctime)s %(levelname)s %(message)s"
-# log_date_format = "%Y-%m-%d %H:%M:%S"
-# minversion = "6.0"
-# filterwarnings = "ignore"
-# norecursedirs = docs build
 
+[tool.pdm.scripts]
+docs = "mkdocs serve -o"
